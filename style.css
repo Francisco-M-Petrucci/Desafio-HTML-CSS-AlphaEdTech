@@ -42,8 +42,44 @@ nav a:hover {
 .hero {
   padding: 100px 60px;
   text-align: center;
-  max-width: 800px;
+  max-width: 1600px;
   margin: 0 auto;
+  position: relative;
+}
+
+.hover-logo-L {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30%;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+.hover-logo-R {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30%;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+
+.hero:hover h2 {
+  color: #0ec0ab;
+}
+
+.hero:hover .hover-logo-L {
+  opacity: 1;
+  transform: translateY(-50%) translateX(10px);
+}
+.hero:hover .hover-logo-R {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-10px);
 }
 
 .greeting {
@@ -307,6 +343,21 @@ footer {
   color: #9ca3af;
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    max-width: 90%;
+  }
+  
+  .hover-logo-L {
+    width: 120px;
+    left: 10px;
+  }
+  .hover-logo-R {
+    width: 120px;
+    right: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -323,8 +374,17 @@ footer {
   }
  
   .hero h1 {
-    font-size: 32px;
+    font-size: 36px;
   }
+ 
+  .hero h2 {
+    font-size: 20px;
+  }
+ 
+  .hero p {
+    font-size: 14px;
+  }
+
  
   .buttons {
     flex-direction: column;
@@ -337,4 +397,16 @@ footer {
   .skills, .projects, .contact {
     padding: 60px 20px;
   }
+
+  .hover-logo-L, .hover-logo-R {
+  display: none;
+  }
 }
+
+/* 
+
+@media (max-width: 600px) {
+  .hover-logo-L, .hover-logo-R {
+    display: none;
+  }
+} */

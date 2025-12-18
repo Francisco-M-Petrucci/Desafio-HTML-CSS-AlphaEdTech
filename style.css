@@ -5,8 +5,11 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #0f1419;
+  font-family: "Oswald", sans-serif;
+  background-image: url('./resources/parallax.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #e8eaed;
   line-height: 1.6;
 }
@@ -36,7 +39,7 @@ nav {
 }
 
 nav a {
-  color: #9ca3af;
+  color: #d8d8d8;
   text-decoration: none;
 }
 
@@ -47,6 +50,7 @@ nav a:hover {
 .hero {
   padding: 100px 60px;
   text-align: center;
+  height: 70vh;
   max-width: 1600px;
   margin: 0 auto;
   position: relative;
@@ -73,11 +77,6 @@ nav a:hover {
   pointer-events: none;
 }
 
-
-.hero:hover h2 {
-  color: #0ec0ab;
-}
-
 .hero:hover .hover-logo-L {
   opacity: 1;
   transform: translateY(-50%) translateX(10px);
@@ -87,25 +86,25 @@ nav a:hover {
   transform: translateY(-50%) translateX(-10px);
 }
 
-.greeting {
+/* .greeting {
   color: #2dd4bf;
   margin-bottom: 10px;
-}
+} */
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 80px;
   margin-bottom: 5px;
 }
 
 .hero h2 {
-  font-size: 36px;
-  color: #9ca3af;
+  font-size: 42px;
+  color: #e9eaec;
   margin-bottom: 25px;
   font-weight: normal;
 }
 
 .hero p {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .bio {
@@ -301,11 +300,6 @@ nav a:hover {
 #uxuiSC  { --accent: #59ec15; --comp: #b91de9;}  
 
 
-
-
-
-
-
 .projects {
   padding: 80px 60px;
   background-color: #141b22;
@@ -326,6 +320,8 @@ nav a:hover {
 }
 
 .project-card {
+  text-decoration: none;
+  color: inherit;
   background-color: #0f1419;
   border-radius: 12px;
   border: 1px solid #1e2a36;
@@ -414,12 +410,13 @@ nav a:hover {
   text-decoration: underline;
 }
 
-footer {
-  padding: 30px 60px;
+/* footer {
+  height: 30px;
+  background-color: #0f1419;
   border-top: 1px solid #1e2a36;
   text-align: center;
   color: #9ca3af;
-}
+} */
 
 @media (max-width: 1024px) {
   .hero {

@@ -42,6 +42,42 @@ body {
   cursor: default;              /* Cursor padrão */
 }
 
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f1419;
+  padding: 20px 60px;
+  border-bottom: 1px solid #1e2a36;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2dd4bf;
+  padding-left: 60px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  padding-right: 50px;
+}
+
+nav a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #2dd4bf;
+}
+
+
 .lista :nth-child(3) {
   color: blue;
 }

@@ -5,6 +5,42 @@ body {
     background-color: #0b1129; 
 }
 
+header.header1 {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f1419;
+  padding: 20px 0px;
+  border-bottom: 1px solid #1e2a36;
+  font-family: 'Inter', sans-serif;
+}
+
+.logo1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2dd4bf;
+  padding-left: 60px;
+}
+
+nav.nav-links1 {
+  display: flex;
+  gap: 30px;
+  padding-right: 30px;
+}
+
+nav.nav-links1 a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+nav.nav-links1 a:hover {
+  color: #2dd4bf;
+}
+
 .hero-section {
     position: relative;
     width: 100%;
@@ -18,7 +54,7 @@ body {
 }
 
 
-.header {
+.header2 {
     position: absolute; 
     top: 0;
     left: 5%;
@@ -31,22 +67,22 @@ body {
     justify-content: space-between;
 }
 
-.logo {
+.logo2 {
     font-weight: bold;
     font-size: 24px;
     letter-spacing: 3px;
 }
 
-.nav-links {
+.nav-links2 {
     display: flex;
     gap: 40px;
 }
 
-.nav-links :hover{
+.nav-links2 :hover{
     filter:brightness(0.7);
 }
 
-.nav-links a {
+.nav-links2 a {
     color: white;
     text-decoration: none;
     font-size: 16px;

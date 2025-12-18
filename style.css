@@ -223,27 +223,24 @@ nav a:hover {
 }
 
 .skill-logo-display {
-  width: 150px;       /* Ajuste o tamanho da logo aqui */
+  width: 150px;
   height: 150px;
-  margin: 40px auto 0; /* Centraliza e dá espaçamento do grid */
+  margin: 40px auto 0;
   background-image: var(--current-logo);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   
-  /* Animação de aparecimento */
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Quando houver hover em qualquer card, a logo aparece */
 .skills:has(.skill-card:hover) .skill-logo-display {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Tabela de associação de logos (Caminhos das imagens) */
 .skills:has(#htmlSC:hover)  { --current-logo: url('./resources/html-logo.png'); }
 .skills:has(#cssSC:hover)   { --current-logo: url('./resources/css-logo.png'); }
 .skills:has(#jsSC:hover)    { --current-logo: url('./resources/js-logo.png'); }
@@ -377,7 +374,7 @@ nav a:hover {
 }
 
 .project-card h3 {
-  font-size: 20px;
+  font-size: 24px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 10px;
@@ -388,7 +385,7 @@ nav a:hover {
   padding-top: 15px;
   padding-left: 30px;
   padding-right: 30px;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .tags {
@@ -470,6 +467,10 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+  body {
+    background-image: url('./resources/parallax2.jpg');
+  }
+
   header {
     flex-direction: column;
     gap: 20px;
@@ -485,15 +486,15 @@ nav a:hover {
   }
  
   .hero h1 {
-    font-size: 36px;
+    font-size: 42px;
   }
  
   .hero h2 {
-    font-size: 20px;
+    font-size: 28px;
   }
  
   .hero p {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .buttons {
@@ -511,4 +512,16 @@ nav a:hover {
   .hover-logo-L, .hover-logo-R {
   display: none;
   }
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 28px;
+}
+
+.about-text p {
+  font-size: 20px;
+}
 }

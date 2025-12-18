@@ -190,18 +190,18 @@ nav a:hover {
 }
 
 .about-text {
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .about-text h2 {
-  font-size: 40px;
+  font-size: 46px;
   margin-bottom: 20px;
 }
 
 .about-text p {
   color: #ffffff;
   margin-bottom: 15px;
-  font-size: 19px;
+  font-size: 28px;
   
   opacity: 0;
   max-height: 0;
@@ -219,7 +219,37 @@ nav a:hover {
   overflow: hidden;
   --current-accent: #1e2a36;
   --current-comp: #141b22;
+  --current-logo: none;
 }
+
+.skill-logo-display {
+  width: 150px;       /* Ajuste o tamanho da logo aqui */
+  height: 150px;
+  margin: 40px auto 0; /* Centraliza e dá espaçamento do grid */
+  background-image: var(--current-logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* Animação de aparecimento */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Quando houver hover em qualquer card, a logo aparece */
+.skills:has(.skill-card:hover) .skill-logo-display {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tabela de associação de logos (Caminhos das imagens) */
+.skills:has(#htmlSC:hover)  { --current-logo: url('./resources/html-logo.png'); }
+.skills:has(#cssSC:hover)   { --current-logo: url('./resources/css-logo.png'); }
+.skills:has(#jsSC:hover)    { --current-logo: url('./resources/js-logo.png'); }
+.skills:has(#gitSC:hover)   { --current-logo: url('./resources/git-logo.png'); }
+.skills:has(#figmaSC:hover) { --current-logo: url('./resources/figma-logo.png'); }
+.skills:has(#uxuiSC:hover) { --current-logo: url('./resources/uxui-logo.png'); }
 
 .skills::before {
   content: "";
@@ -240,7 +270,7 @@ nav a:hover {
 .skills:has(#jsSC:hover)    { --current-accent: #F7DF1E; --current-comp: #000000; }
 .skills:has(#gitSC:hover)   { --current-accent: #F05032; --current-comp: #24292F; }
 .skills:has(#figmaSC:hover) { --current-accent: #A259FF; --current-comp: #5DA600; }
-.skills:has(#uxuiSC:hover)  { --current-accent: #59ec15; --current-comp: #b91de9; }
+.skills:has(#uxuiSC:hover)  { --current-accent: #1F6FDA; --current-comp: #95D259; }
 
 .skills h2 {
   font-size: 32px;
@@ -272,6 +302,7 @@ nav a:hover {
   z-index: 1;
   overflow: hidden;
   transition: border-color 0.4s ease;
+  font-size: 20px;
 }
 
 .skill-card::before {
@@ -297,7 +328,7 @@ nav a:hover {
 #jsSC     { --accent: #F7DF1E; --comp: #000000;}  
 #gitSC    { --accent: #F05032; --comp: #24292F;} 
 #figmaSC  { --accent: #A259FF; --comp: #5DA600;}  
-#uxuiSC  { --accent: #59ec15; --comp: #b91de9;}  
+#uxuiSC  { --accent: #1F6FDA; --comp: #95D259;}  
 
 
 .projects {
@@ -385,7 +416,7 @@ nav a:hover {
 }
 
 .contact h2 {
-  font-size: 32px;
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
@@ -399,6 +430,7 @@ nav a:hover {
   flex-direction: column;
   gap: 15px;
   align-items: center;
+  font-size: 20px;
 }
 
 .contact-links a {
